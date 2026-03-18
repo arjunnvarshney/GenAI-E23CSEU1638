@@ -1,0 +1,7 @@
+Seed Text: 'machine learning models'
+
+LSTM Generated sequence:
+machine learning models learn patterns from data
+
+Transformer Generated sequence:
+machine learning models learn patterns from data
