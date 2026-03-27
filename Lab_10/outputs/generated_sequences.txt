@@ -1,0 +1,7 @@
+Seed Text: 'artificial intelligence systems'
+
+LSTM Generated sequence:
+artificial intelligence systems learn patterns from data
+
+Transformer Generated sequence:
+artificial intelligence systems learn patterns from data
