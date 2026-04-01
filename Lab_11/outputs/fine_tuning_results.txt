@@ -1,0 +1,67 @@
+Starting Lab 11 - Fine-Tuning GPT-2
+
+--------------------------------------------------
+Component I: E-Commerce Product Reviews
+--------------------------------------------------
+
+=== BASELINE REVIEWS (Before Fine-Tuning) ===
+Prompt: This product is
+Output: This product is designed out of the Box's most advanced processing architecture. To learn more or play more you will need to check the web links provided below.
+
+Prompt: I bought this phone and
+Output: I bought this phone and I can just remember people being able to use my Android phone that day as if we hadn't already had access to Google Maps in the morning.
+
+Prompt: The quality of this item
+Output: The quality of this item has led it to perform at slightly less than standard capacities over the years. We can't speak for other developers.
+
+Starting fine-tuning for Component I...
+Epoch [1/15] ...
+Epoch [15/15] ...
+Perplexity after training (Reviews): 2.41
+
+=== FINE-TUNED REVIEWS (After Fine-Tuning) ===
+Prompt: This product is
+  Baseline:   This product is designed out of the Box's most advanced processing architecture. To learn more or play more you will
+  Fine-Tuned: This product is excellent value for money and the build quality feels premium despite the affordable price. I have been using this product for three months and it still works perfectly like day one.
+
+Prompt: I bought this phone and
+  Baseline:   I bought this phone and I can just remember people being able to use my Android phone that day as if we hadn't already had access to Google Maps
+  Fine-Tuned: I bought this phone and this phone has an amazing battery life and the camera quality is outstanding for the price.
+
+Prompt: The quality of this item
+  Baseline:   The quality of this item has led it to perform at slightly less than standard capacities over the years. We can't s
+  Fine-Tuned: The quality of this item feels premium despite the affordable price. Highly recommend this product to anyone looking for quality and reliability.
+
+--------------------------------------------------
+Component II: Food-Tech Recipe Instructions
+--------------------------------------------------
+
+=== BASELINE RECIPES (Before Fine-Tuning) ===
+Prompt: To make butter chicken
+Output: To make butter chicken go straight for a little time: Place a couple large bowls around the large plate side-by-side, placing an apple underneath so that the center of the pie doesn't touch the chicken directly.
+
+Prompt: For pasta carbonara
+Output: For pasta carbonara there are certain variations and rules, such as adding too much salt or skipping the cheese. This gives an idea of what goes wrong.
+
+Prompt: To prepare a chocolate cake
+Output: To prepare a chocolate cake I prefer setting aside half a cup of milk to rest in the fridge before the eggs drop. Make sure you don't over-mix.
+
+Starting fine-tuning for Component II...
+Epoch [1/15] ...
+Epoch [15/15] ...
+Perplexity after training (Recipes): 2.12
+
+=== FINE-TUNED RECIPES (After Fine-Tuning) ===
+Prompt: To make butter chicken
+  Baseline:   To make butter chicken go straight for a little time: Place a couple large bowls around the large plate side-by-side
+  Fine-Tuned: To make butter chicken start by marinating chicken pieces in yogurt with turmeric chili powder and garam masala for one hour. heat butter in a pan and fry onions until golden brown then add ginger garlic paste and cook for two minutes.
+
+Prompt: For pasta carbonara
+  Baseline:   For pasta carbonara there are certain variations and rules, such as adding too much salt or skipping the cheese. Th
+  Fine-Tuned: For pasta carbonara boil spaghetti in salted water until al dente and reserve half cup of pasta water. fry diced pancetta in olive oil until crispy and set aside.
+
+Prompt: To prepare a chocolate cake
+  Baseline:   To prepare a chocolate cake I prefer setting aside half a cup of milk to rest in the fridge before the eggs drop. M
+  Fine-Tuned: To prepare a chocolate cake cream together butter and sugar until light and fluffy. beat in eggs one at a time then add vanilla extract and mix well.
+
+Lab 11 execution completed! Results stored in 'outputs/fine_tuning_results.txt'
