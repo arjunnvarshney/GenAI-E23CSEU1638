@@ -1,0 +1,7 @@
+=== Generative Model with Attention ===
+Input: 'how are you'
+Output: 'i am fine'
+
+Input: 'hello'
+Output: 'hi how are you'
+
