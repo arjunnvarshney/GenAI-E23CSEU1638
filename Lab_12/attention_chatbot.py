@@ -236,3 +236,32 @@ with open('outputs/results.txt', 'w') as f:
     
     out_2 = evaluateAndShowAttention("hello")
     f.write(f"Input: 'hello'\nOutput: '{out_2}'\n\n")
+
+def chat():
+    print("\n" + "="*50)
+    print("Chatbot is ready! (Type 'quit' or 'exit' to stop)")
+    print("="*50)
+    while True:
+        try:
+            user_input = input("You: ").lower().strip()
+            if user_input in ['quit', 'exit']:
+                print("Bot: Goodbye!")
+                break
+            if user_input == "":
+                continue
+            
+            # Check if all words are in vocab
+            words = user_input.replace('?', '').replace(',', '').replace('!', '').split(' ')
+            unknown_words = [w for w in words if w not in vocab.word2index]
+            
+            if unknown_words:
+                print(f"Bot: I don't know the word(s): {', '.join(unknown_words)}")
+                continue
+                
+            out_sentence = evaluateAndShowAttention(user_input)
+            print(f"Bot: {out_sentence}")
+        except Exception as e:
+            print(f"Bot: Oops! Something went wrong: {e}")
+
+if __name__ == '__main__':
+    chat()
