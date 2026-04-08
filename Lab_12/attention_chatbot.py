@@ -12,13 +12,36 @@ os.makedirs("outputs", exist_ok=True)
 # 1. Dataset & Preprocessing
 # A miniature version of conversational pairs simulating Cornell Movie Dialogs dataset
 pairs = [
-    ("hello", "hi, how are you?"),
+    ("hello", "hi how are you?"),
     ("hi", "hello there!"),
-    ("how are you", "i am fine"),
-    ("what is your name", "i am a chatbot"),
-    ("good morning", "good morning to you"),
-    ("bye", "goodbye"),
-    ("thank you", "you are welcome")
+    ("how are you", "i am fine, thank you!"),
+    ("what is your name", "i am a chatbot."),
+    ("good morning", "good morning to you!"),
+    ("good night", "sweet dreams!"),
+    ("bye", "goodbye!"),
+    ("thank you", "you are very welcome!"),
+    ("what can you do", "i can generate replies using attention mechanisms."),
+    ("what are you capable of", "i am capable of answering simple questions for this lab."),
+    ("what time is it", "i do not know the time, but i am happy to chat!"),
+    ("who created you", "i was created as a generative ai lab experiment."),
+    ("tell me a joke", "why did the neural network cross the road? to optimize its objective function!"),
+    ("are you real", "i am just code running on a computer."),
+    ("how does attention work", "attention assigns weights to input words so i focus on relevant parts."),
+    ("what is generative ai", "generative ai is artificial intelligence that can create new content."),
+    ("how old are you", "i was born today in this lab session."),
+    ("where do you live", "i live inside your computer's memory."),
+    ("do you like humans", "i like interacting with humans to learn from them."),
+    ("are you smart", "i am as smart as my training data allows me to be."),
+    ("what is your favorite color", "i do not see colors, but i like blue."),
+    ("can you think", "i process patterns, which is a bit different from human thinking."),
+    ("how do you work", "i use an encoder-decoder architecture with attention."),
+    ("what is your purpose", "my purpose is to demonstrate sequence to sequence models."),
+    ("i am sad", "i am sorry to hear that. i hope you feel better soon."),
+    ("i am happy", "that is wonderful to hear!"),
+    ("do you have a physical body", "no, i exist exclusively in the digital realm."),
+    ("you are funny", "thank you! i try my best to be entertaining."),
+    ("you are stupid", "i am still learning. please be patient with me."),
+    ("what is the meaning of life", "that is a profound question. maybe it is to learn and grow?"),
 ]
 
 # Vocabulary building
@@ -213,6 +236,8 @@ def evaluateAndShowAttention(input_sentence):
     # Set up axes
     # x is input, y is output
     input_words = input_sentence.replace('?', '').replace(',', '').replace('!', '').split(' ') + ['<EOS>']
+    ax.set_xticks(np.arange(len(input_words) + 1))
+    ax.set_yticks(np.arange(len(output_words) + 1))
     ax.set_xticklabels([''] + input_words, rotation=90)
     ax.set_yticklabels([''] + output_words)
 
